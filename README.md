@@ -132,7 +132,7 @@ id	| type
 
 Just like we saw before, this column actually contains two types of data. One seems to be the user type (with values like “admin” or “user”) and one seems to be the country this user is in (with values like “US” or “Kenya”).
 
-We can no longer just split along the first 4 characters because admin and user are of different lengths. Instead, we know that we want to split along the `"\_"`. We can thus use the tidyr function `separate()` to split this column into two, separate columns:
+We can no longer just split along the first 4 characters because admin and user are of different lengths. Instead, we know that we want to split along the `"_"`. We can thus use the tidyr function `separate()` to split this column into two, separate columns:
 
 ```r
 # Create the 'user_type' and 'country' columns
@@ -142,7 +142,7 @@ df %>%
 
 - `type` is the column to split
 - `c('user_type','country')` is a vector with the names of the two new columns
-- `'\_'` is the character to split on
+- `'_'` is the character to split on
 
 ### Looking at Data Types
 
